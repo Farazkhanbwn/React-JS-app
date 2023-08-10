@@ -17,5 +17,5 @@ import Employee from "./state/event_handling";
 
 // Class Example
 ReactDOM.render(<App /> , document.getElementById("root"));
-ReactDOM.render(<Teacher marks = "998"/>, document.getElementById("state"));
-ReactDOM.render(<Employee community = "community"/>, document.getElementById("test"));
+// ReactDOM.render(<Teacher marks = "998"/>, document.getElementById("state"));
+// ReactDOM.render(<Employee community = "community"/>, document.getElementById("test"));
