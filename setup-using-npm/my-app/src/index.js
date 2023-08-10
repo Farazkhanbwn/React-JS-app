@@ -1,9 +1,12 @@
-import React from "react";
+// import React from "react";
 import ReactDOM from "react-dom";
 import Student from "./Student";
 import App from "./App";
-import Teacher from "./state/state";
-import Employee from "./state/event_handling";
+import Exression from "./Js_expression/js_expression";
+import Person from "./Js_expression/js_expression";
+import Value from "./Js_expression/JSX_children";
+import React from "react";
+// import Expression from "./javascript_expression/js_expression";
 // import el from "./App";
 
 // let el = <h1>Hello React</h1>;
@@ -17,5 +20,6 @@ import Employee from "./state/event_handling";
 
 // Class Example
 ReactDOM.render(<App /> , document.getElementById("root"));
-ReactDOM.render(<Teacher marks = "998"/>, document.getElementById("state"));
-ReactDOM.render(<Employee community = "community"/>, document.getElementById("test"));
+ReactDOM.render(<Exression name="Numan" marks = {100 + 3}/> , document.getElementById("state"));
+ReactDOM.render(<Value>Lahore</Value> , document.getElementById("test"));
+// ReactDOM.render(<Person /> , document.getElementById("testing"));
