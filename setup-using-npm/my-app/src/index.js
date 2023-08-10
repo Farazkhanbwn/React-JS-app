@@ -1,7 +1,9 @@
-// import React from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import Student from "./Student";
 import App from "./App";
+import Teacher from "./state/state";
+import Employee from "./state/event_handling";
 // import el from "./App";
 
 // let el = <h1>Hello React</h1>;
@@ -15,3 +17,5 @@ import App from "./App";
 
 // Class Example
 ReactDOM.render(<App /> , document.getElementById("root"));
+ReactDOM.render(<Teacher marks = "998"/>, document.getElementById("state"));
+ReactDOM.render(<Employee community = "community"/>, document.getElementById("test"));
