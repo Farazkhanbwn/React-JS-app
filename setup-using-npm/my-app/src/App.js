@@ -1,26 +1,33 @@
 import React , {Component , Fragment} from "react";
 import Student from "./Student";
 
-// class App extends Component{
-//     render(){
-//         // return React.createElement("h1" , null , "Hello Flate mates");
+class App extends Component{
+    constructor(props){
+        super(props);
+        console.log("App - Constructor Called");
+        console.log(props);
+        this.state = {
+            fname : "Liaquat Ali"
+        }
+    }
 
-//         // Frangment
-//         return (<>
-//         <h1>Hello React developers from Pakistan</h1>
-//         <h2>Pakistan is the largest country</h2>
-//         <p>We are Learning React</p>
-//         </>);
-//     }
-// }
+    static getDerivedStateFromProps(props , state){
+        console.log("Get Derived State From Props");
+        console.log(props);
+        console.log(state);
+        return null;
+    }
 
-const App = () =>{
-    return (
-        <div>
-            <Student name = "faraz"/>
-            <Student name = "Hanzala"/>
-            <Student name = "Hashir"/>
-        </div>
-    )
+    componentDidMount(){
+        // Get Data from serer and set the data to state
+        console.log("App - componentDidMount - Mounted");
+    }
+
+    render(){
+        console.log("App - Rendered");
+        return <Fragment>
+            <Student name = "Numan"></Student>
+        </Fragment>
+    }
 }
 export default App;

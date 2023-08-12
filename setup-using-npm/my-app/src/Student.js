@@ -1,25 +1,25 @@
-// function Student(props){
-//     return <h1>We are at Lahore person {props.name}</h1>
-// }
+import React , {Component, Fragment} from 'react'
+import Marks from './Marks';
 
-import { Component } from "react";
+export default class Student extends Component{
+    constructor(){
+        super();
+        this.state = {
+            roll : 101,
+        }
+    }
+    clickHandle = () => {
+        console.log("Button Clicked");
+        this.setState({roll : this.state.roll * 2});
+    }
 
-// function ES6
-const Student = (props) => {
-    return <h1>My Name is {props.name}</h1>
+    render(){
+        console.log("Student - Rendered [Child of App]");
+        return <Fragment>
+        <h1>Kindly Give Your corrct Name {this.props.name}</h1>
+        <Marks roll = {this.state.roll}/>
+        <button onClick={this.clickHandle}>Change</button>
+        
+        </Fragment>
+    }
 }
-
-// simple
-// function Student (props){
-//     return <h1>We are at Lahore person {props.name}</h1>
-// }
-
-// Class Example
-
-// class Student extends Component{
-//     render(){
-//         return <h1>My name is {this.props.name}</h1>
-//     }
-// }
-
-export default Student;
