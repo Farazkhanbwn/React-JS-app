@@ -2,6 +2,14 @@ import React , {Component , Fragment} from "react";
 import Student from "./Student";
 
 class App extends Component{
+    componentDidMount(){
+        console.log("App Mounted");
+    }
+
+    componentWillUnmount(){
+        console.log("App UnMounted");
+    }
+
     constructor(props){
         super(props);
         console.log("App - Constructor Called");
@@ -18,14 +26,10 @@ class App extends Component{
         return null;
     }
 
-    componentDidMount(){
-        // Get Data from serer and set the data to state
-        console.log("App - componentDidMount - Mounted");
-    }
-
     render(){
         console.log("App - Rendered");
         return <Fragment>
+            {/* <h1>We are Learning at IUB</h1> */}
             <Student name = "Numan"></Student>
         </Fragment>
     }
