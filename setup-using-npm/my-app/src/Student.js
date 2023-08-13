@@ -1,25 +1,36 @@
-// function Student(props){
-//     return <h1>We are at Lahore person {props.name}</h1>
-// }
+import React , {Component, Fragment} from 'react'
+import Marks from './Marks';
 
-import { Component } from "react";
+export default class Student extends Component{
+    componentDidMount(){
+        console.log("Student Mounted");
+    }
 
-// function ES6
-const Student = (props) => {
-    return <h1>My Name is {props.name}</h1>
+    componentWillUnmount(){
+        console.log("Student UnMounted");
+    }
+
+    constructor(){
+        super();
+        console.log("Student - Constructor Called");
+        this.state = {
+            roll : 101,
+            showMarks: true
+        }
+    }
+    clickHandle = () => {
+        console.log("Button Clicked");
+        this.setState({roll : this.state.roll + 2, showMarks: !this.state.showMarks}); 
+
+    }
+
+    render(){
+        console.log("Student - Rendered [Child of App]");
+        return <Fragment>
+            {/* <h1>Pakistan is the Largest country all over the world</h1> */}
+        <h1>Kindly Give Your corrct Name {this.props.name}</h1>
+       {this.state.showMarks &&  <Marks roll = {this.state.roll}/>}
+        <button onClick={this.clickHandle}>Change</button>
+        </Fragment>
+    }
 }
-
-// simple
-// function Student (props){
-//     return <h1>We are at Lahore person {props.name}</h1>
-// }
-
-// Class Example
-
-// class Student extends Component{
-//     render(){
-//         return <h1>My name is {this.props.name}</h1>
-//     }
-// }
-
-export default Student;
