@@ -13,7 +13,7 @@ import Data from "./state/passing_argument_event_handler";
 // ReactDOM.render(<Student /> , document.getElementById("state"));
 
 // Class Example
-ReactDOM.render(<App name = "I am Your Props here"/> , document.getElementById("root"));
+ReactDOM.render(<App name = "I am Your Props here" consumer ={true}/> , document.getElementById("root"));
 // ReactDOM.unmountComponentAtNode(document.getElementById("root"));
 // ReactDOM.render(<Exression name="Numan" marks = {100 + 3}/> , document.getElementById("state"));
 // ReactDOM.render(<Value>Lahore</Value> , document.getElementById("test"));
