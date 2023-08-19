@@ -4,6 +4,11 @@ import User from "./condtional-rendering/user";
 import Guest from "./condtional-rendering/guest";
 import Map from "./condtional-rendering/map";
 
+import Hook from "./hooks/hooks";
+import StateEffectPractice from "./hooks/useEffect";
+import PracticeHook from "./hooks/hooks-practice";
+
+
 class App extends Component{
     componentDidMount(){
         console.log("App Mounted");
@@ -49,7 +54,12 @@ class App extends Component{
             {/* {consumer && <User /> && <Guest />} */}
             {/* <h1>We are Learning at IUB</h1> */}
             <Student name = "Numan"></Student>
+
             <Map />
+
+            <Hook />
+            <StateEffectPractice />
+            <PracticeHook />
         </Fragment>
         // return <div>
         //     /* IIFE Concept That call Yourself *
