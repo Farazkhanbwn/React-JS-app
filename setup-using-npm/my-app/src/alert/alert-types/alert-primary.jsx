@@ -1,7 +1,12 @@
 import React from "react";
 
-const AlertPrimary = ({ text }) => {
-  return <p className={`alert alert-primary`}>{text}</p>;
+const AlertPrimary = ({ title, text }) => {
+  return (
+    <p className={`alert alert-primary`}>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </p>
+  );
 };
 
 export default AlertPrimary;

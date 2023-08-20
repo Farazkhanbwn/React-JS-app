@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Student from "./Student";
 import Alert from "./alert/alert.jsx";
 import color from "./shared/theme/colors";
+import AlertType from "./alert/alert-types";
 
 class App extends Component {
   componentDidMount() {
@@ -32,7 +33,11 @@ class App extends Component {
     console.log("App - Rendered");
     return (
       <Fragment>
-        <Alert type="primary" text="This is primary alert" />
+        <Alert
+          type={AlertType.primary}
+          title="Well Done"
+          text="This is primary alert"
+        />
         <h1 style={{ color: `${color.success}` }}>We are Learning at IUB</h1>
         <Student name="Numan"></Student>
       </Fragment>
