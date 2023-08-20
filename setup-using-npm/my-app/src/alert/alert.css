@@ -30,8 +30,16 @@
     font-family: system-ui;
 }
 
-.alert-heading {
+.alert h3,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.alert .alert-heading {
     color: inherit;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .alert-link {
@@ -98,10 +106,6 @@
     color: #856404;
     background-color: #fff3cd;
     border-color: #ffeeba;
-}
-
-.alert-warning hr {
-    border-top-color: #ffe8a1;
 }
 
 .alert-warning .alert-link {

@@ -10,32 +10,32 @@ import AlertWarning from "./alert-types/alert-warning";
 import AlertDark from "./alert-types/alert-dark";
 import AlertInfo from "./alert-types/alert-info";
 
-const Alert = ({ text, type, title }) => {
+const Alert = (props) => {
   const factoryCreateButton = () => {
-    switch (type) {
+    switch (props.type) {
       case AlertType.primary:
-        return <AlertPrimary text={text} title={title} />;
+        return <AlertPrimary {...props} />;
 
       case AlertType.secondary:
-        return <AlertSecondary text={text} title={title} />;
+        return <AlertSecondary {...props} />;
 
       case AlertType.success:
-        return <AlertSuccess text={text} title={title} />;
+        return <AlertSuccess {...props} />;
 
       case AlertType.danger:
-        return <AlertDanger text={text} title={title} />;
+        return <AlertDanger {...props} />;
 
       case AlertType.warning:
-        return <AlertWarning text={text} title={title} />;
+        return <AlertWarning {...props} />;
 
       case AlertType.dark:
-        return <AlertDark text={text} title={title} />;
+        return <AlertDark {...props} />;
 
       case AlertType.info:
-        return <AlertInfo text={text} title={title} />;
+        return <AlertInfo {...props} />;
 
       default:
-        return <AlertDefault text={text} title={title} />;
+        return <AlertDefault {...props} />;
     }
   };
 

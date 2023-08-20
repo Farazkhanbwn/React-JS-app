@@ -1,8 +1,12 @@
 import React from "react";
-import AlertType from "../alert-types";
 
-const AlertInfo = ({ text }) => {
-  return <p className={`alert alert-info`}>{text}</p>;
+const AlertInfo = ({ title, text }) => {
+  return (
+    <div className={`alert alert-info`}>
+      <h3 className="alert-heading">{title}</h3>
+      <p className="alert-description">{text}</p>
+    </div>
+  );
 };
 
 export default AlertInfo;

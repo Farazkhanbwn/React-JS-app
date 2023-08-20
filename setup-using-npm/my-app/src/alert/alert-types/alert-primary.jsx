@@ -2,10 +2,10 @@ import React from "react";
 
 const AlertPrimary = ({ title, text }) => {
   return (
-    <p className={`alert alert-primary`}>
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </p>
+    <div className={`alert alert-primary`}>
+      <h3 className="alert-heading">{title}</h3>
+      <p className="alert-description">{text}</p>
+    </div>
   );
 };
 

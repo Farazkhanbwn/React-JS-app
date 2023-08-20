@@ -35,8 +35,8 @@ class App extends Component {
       <Fragment>
         <Alert
           type={AlertType.primary}
-          title="Well Done"
-          text="This is primary alert"
+          title="Well Done !"
+          text="This is primary alert and we are learning"
         />
         <h1 style={{ color: `${color.success}` }}>We are Learning at IUB</h1>
         <Student name="Numan"></Student>

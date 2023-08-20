@@ -1,7 +1,12 @@
 import React from "react";
 
-const AlertSecondary = ({ text }) => {
-  return <p className={`alert alert-seconday`}>{text}</p>;
+const AlertSecondary = ({ title, text }) => {
+  return (
+    <div className={`alert alert-secondary`}>
+      <h3 className="alert-heading">{title}</h3>
+      <p className="alert-description">{text}</p>
+    </div>
+  );
 };
 
 export default AlertSecondary;
