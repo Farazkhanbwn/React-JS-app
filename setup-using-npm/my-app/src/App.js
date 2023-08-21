@@ -1,75 +1,51 @@
-import React , {Component , Fragment} from "react";
+import React, { Component, Fragment } from "react";
 import Student from "./Student";
-import User from "./condtional-rendering/user";
-import Guest from "./condtional-rendering/guest";
-import Map from "./condtional-rendering/map";
+import Alert from "./alert/alert.jsx";
+import color from "./shared/theme/colors";
+import AlertType from "./alert/alert-types";
 
-import Hook from "./hooks/hooks";
-import StateEffectPractice from "./hooks/useEffect";
-import PracticeHook from "./hooks/hooks-practice";
+class App extends Component {
+  componentDidMount() {
+    console.log("App Mounted");
+  }
 
+  componentWillUnmount() {
+    console.log("App UnMounted");
+  }
 
-class App extends Component{
-    componentDidMount(){
-        console.log("App Mounted");
-    }
+  constructor(props) {
+    super(props);
+    console.log("App - Constructor Called");
+    console.log(props);
+    this.state = {
+      fname: "Liaquat Ali",
+    };
+  }
 
-    componentWillUnmount(){
-        console.log("App UnMounted");
-    }
+  static getDerivedStateFromProps(props, state) {
+    console.log("Get Derived State From Props");
+    console.log(props);
+    console.log(state);
+    return null;
+  }
 
-    constructor(props){
-        super(props);
-        console.log("App - Constructor Called");
-        console.log(props);
-        this.state = {
-            isLoggedIn : false
-        }
-    }
+  render() {
+    console.log("App - Rendered");
+    return (
+      <Fragment>
+        <Alert
+          type={AlertType.primary}
+          title="Well Done !"
+          text="This is primary alert and we are learning"
+        />
+        <h1 style={{ color: `${color.success}` }}>We are Learning at IUB</h1>
+        <Student name="Numan"></Student>
+      </Fragment>
+    );
 
-    static getDerivedStateFromProps(props , state){
-        console.log("Get Derived State From Props");
-        console.log(props);
-        console.log(state);
-        return null;
-    }
-
-    clickLogin = () =>{
-        this.setState({isLoggedIn : true})
-    }
-
-    clickLogedout = () =>{
-        this.setState({isLoggedIn : false})
-    }
-
-    render(){
-        console.log("App - Rendered");
-        let consumer = this.state.isLoggedIn;
-        // If Conditon
-        // if(consumer){
-        //     return <User name = "faraz" clickData = {this.clickLogedout}/>
-        // }
-        return <Fragment>
-            {consumer ? <User clickData = {this.clickLogedout}/> :<Guest clickData = {this.clickLogin} />}
-            {/* {consumer && <User /> && <Guest />} */}
-            {/* <h1>We are Learning at IUB</h1> */}
-            <Student name = "Numan"></Student>
-
-            <Map />
-
-            <Hook />
-            <StateEffectPractice />
-            <PracticeHook />
-        </Fragment>
-        // return <div>
-        //     /* IIFE Concept That call Yourself *
-        //     {(() =>{
-        //         if (consumer){
-        //             return <User clickData = {this.clickLogedout}/>
-        //         }
-        //         return <Guest clickData = {this.clickLogin}/>
-        //     })()}
-        // </div>
-    }
+    // return <Parent>
+    //     <Child/>
+    //     </Parent>
+  }
 }
 export default App;
