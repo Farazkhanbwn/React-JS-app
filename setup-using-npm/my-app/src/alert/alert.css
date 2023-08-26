@@ -58,10 +58,6 @@ p {
     border-color: #d6d8db;
 }
 
-.alert-secondary hr {
-    border-top-color: #c8cbcf;
-}
-
 .alert-success {
     color: #155724;
     background-color: #d4edda;
