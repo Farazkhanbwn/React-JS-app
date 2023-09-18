@@ -3,6 +3,8 @@ import Student from "./Student";
 import Alert from "./alert/alert.jsx";
 import color from "./shared/theme/colors";
 import AlertType from "./alert/alert-types";
+import BootstrapButton from "./Bootstrap/button";
+import ReactForm from "./Bootstrap/Form";
 
 class App extends Component {
   componentDidMount() {
@@ -40,6 +42,8 @@ class App extends Component {
         />
         <h1 style={{ color: `${color.success}` }}>We are Learning at IUB</h1>
         <Student name="Numan"></Student>
+        <BootstrapButton />
+        <ReactForm />
       </Fragment>
     );
 
