@@ -3,7 +3,7 @@ import Student from "./Student";
 import Alert from "./alert/alert.jsx";
 import color from "./shared/theme/colors";
 import AlertType from "./alert/alert-types";
-
+import PrimeNumberGenerator from "./Prime-Number-Generator-React/prime-number-generator";
 class App extends Component {
   componentDidMount() {
     console.log("App Mounted");
@@ -40,6 +40,7 @@ class App extends Component {
         />
         <h1 style={{ color: `${color.success}` }}>We are Learning at IUB</h1>
         <Student name="Numan"></Student>
+        <PrimeNumberGenerator />
       </Fragment>
     );
 
