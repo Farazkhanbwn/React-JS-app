@@ -3,8 +3,6 @@ import Student from "./Student";
 import Alert from "./alert/alert.jsx";
 import color from "./shared/theme/colors";
 import AlertType from "./alert/alert-types";
-import RefComponent from "./callBack-ref/ref";
-import RefFunction from "./callBack-ref/ref-functionall";
 
 class App extends Component {
   // componentDidMount() {
@@ -41,9 +39,12 @@ class App extends Component {
           text="This is primary alert and we are learning"
         />
         <h1 style={{ color: `${color.success}` }}>We are Learning at IUB</h1>
+<<<<<<< HEAD
+        <Student name="Numan"></Student>
+        <PrimeNumberGenerator />
+      </Fragment>
+=======
         <Student name="Numan"></Student> */}
-        <RefComponent />
-        <RefFunction />
       </>
     );
 
