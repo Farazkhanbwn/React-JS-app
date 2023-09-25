@@ -1,60 +1,16 @@
-import { useState } from "react";
 import styles from "./prime-number.module.css";
+import usePrimeNumberGeneratedValue from "./hooks/use-prime-number-generator";
 
 function PrimeNumberGenerator() {
-  let [primeNumberArray, setPrimeNumberArray] = useState([]);
-  let [consumedValue, setConsumedValue] = useState();
-
-  let isPrime = (number) => {
-    let isComposite = 0;
-    for (let j = 2; j <= number / 2; j++) {
-      if (number % j === 0) {
-        isComposite = 1;
-      }
-    }
-    return isComposite === 0;
-  };
-
-  let generatePrime = () => {
-    let choice = parseInt(prompt("Enter The Number of prime to generate"));
-    let primeFound = 0;
-    for (let i = 2; ; i++) {
-      if (isPrime(i)) {
-        primeFound++;
-        primeNumberArray.push(i);
-        setPrimeNumberArray([...primeNumberArray]);
-      }
-      if (primeFound === choice) {
-        break;
-      }
-    }
-  };
+  const {
+    consumedValue,
+    primeNumberArray,
+    generateConsumedValue,
+    regeneratePrimeNumber,
+  } = usePrimeNumberGeneratedValue();
 
   let handleGeneratePrimeNumbers = () => {
-    if (primeNumberArray.length > 0) {
-      let shouldGenerate = window.confirm(
-        "Are U want to again Generate Prime Numbers"
-      );
-      if (shouldGenerate) {
-        primeNumberArray = [];
-        setPrimeNumberArray([...primeNumberArray]);
-        generatePrime();
-        setConsumedValue();
-      }
-    } else {
-      generatePrime();
-    }
-  };
-
-  let consumerPrimeNumber = () => {
-    if (primeNumberArray.length === 0) {
-      alert("No Number In Queue Kindly First Gnerate Prime Numbers");
-      setConsumedValue();
-    } else {
-      consumedValue = primeNumberArray.shift();
-      setConsumedValue(consumedValue);
-      setPrimeNumberArray([...primeNumberArray]);
-    }
+    regeneratePrimeNumber();
   };
 
   return (
@@ -72,7 +28,7 @@ function PrimeNumberGenerator() {
 
       <button
         className={`${styles.btn} ${styles.btnSuccess}`}
-        onClick={consumerPrimeNumber}
+        onClick={generateConsumedValue}
       >
         Consume Prime Number
       </button>
