@@ -4,6 +4,8 @@ import Alert from "./alert/alert.jsx";
 import color from "./shared/theme/colors";
 import AlertType from "./alert/alert-types";
 import PrimeNumberGenerator from "./Prime-Number-Generator-React/prime-number-generator";
+import BootstrapButton from "./Bootstrap/button";
+import ReactForm from "./Bootstrap/Form";
 
 class App extends Component {
   // componentDidMount() {
@@ -40,9 +42,11 @@ class App extends Component {
           text="This is primary alert and we are learning"
         />
         <h1 style={{ color: `${color.success}` }}>We are Learning at IUB</h1>
-<<<<<<< HEAD
+<<<<<
         <Student name="Numan"></Student>
         <PrimeNumberGenerator />
+        <BootstrapButton />
+        <ReactForm />
       </Fragment>
 =======
         <Student name="Numan"></Student> */}
