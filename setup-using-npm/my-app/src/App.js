@@ -6,6 +6,10 @@ import AlertType from "./alert/alert-types";
 import PrimeNumberGenerator from "./Prime-Number-Generator-React/prime-number-generator";
 import BootstrapButton from "./Bootstrap/button";
 import ReactForm from "./Bootstrap/Form";
+import RefComponent from "./callBack-ref/ref";
+import RefFunction from "./callBack-ref/ref-functionall";
+import ContextApi from "./context-api/context-api";
+import Parent from "./context-api/parent";
 
 class App extends Component {
   // componentDidMount() {
@@ -51,6 +55,10 @@ class App extends Component {
 =======
         <Student name="Numan"></Student> */}
         <PrimeNumberGenerator />
+        {/* <RefComponent />
+        <RefFunction /> */}
+        <ContextApi />
+        <Parent />
       </>
     );
 
